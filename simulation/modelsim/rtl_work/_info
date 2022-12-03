@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\ProgramasCEFET\quartus\AOCII\pratica4\simulation\modelsim
+vmemory
+Ihd`1nKKGYGHU6lKhbIZ[^2
+VWI6L8SUWN_d8VJP71amo01
+Z1 dC:\ProgramasCEFET\quartus\AOCII\pratica4\simulation\modelsim
+w1670019017
+8C:/ProgramasCEFET/quartus/AOCII/pratica4/memory.v
+FC:/ProgramasCEFET/quartus/AOCII/pratica4/memory.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/ProgramasCEFET/quartus/AOCII/pratica4 -O0
+!i10b 1
+!s100 8l;?`eeen:D[Og>@i>Pmn3
+!s85 0
+!s108 1670020319.597000
+!s107 C:/ProgramasCEFET/quartus/AOCII/pratica4/memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOCII/pratica4|C:/ProgramasCEFET/quartus/AOCII/pratica4/memory.v|
+!s101 -O0
+vsnooping
+IDcDP@9hol?;@oF8e8=[_=2
+V@z0HQ<XilG:38A=XR@MOZ2
+R1
+w1670019472
+8C:/ProgramasCEFET/quartus/AOCII/pratica4/snooping.v
+FC:/ProgramasCEFET/quartus/AOCII/pratica4/snooping.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 @jbkT[1BPIL9VK5f5;OY40
+!s85 0
+!s108 1670020319.679000
+!s107 C:/ProgramasCEFET/quartus/AOCII/pratica4/snooping.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOCII/pratica4|C:/ProgramasCEFET/quartus/AOCII/pratica4/snooping.v|
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 lL>P17E?08GG8_4P>nnbf1
+IZZd;9cn<WYcO7N2dR@AY73
+VnHOh;8k?6nP[Od?fL@TB_3
+R1
+w1670020261
+8C:/ProgramasCEFET/quartus/AOCII/pratica4/testbench.v
+FC:/ProgramasCEFET/quartus/AOCII/pratica4/testbench.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1670020319.764000
+!s107 C:/ProgramasCEFET/quartus/AOCII/pratica4/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/ProgramasCEFET/quartus/AOCII/pratica4|C:/ProgramasCEFET/quartus/AOCII/pratica4/testbench.v|
+!s101 -O0
+R3
+R4

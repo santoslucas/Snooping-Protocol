@@ -1,0 +1,694 @@
+Analysis & Synthesis report for pratica4
+Fri Dec 02 19:31:55 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |snooping|Tstep_Q
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |snooping
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Dec 02 19:31:55 2022           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; pratica4                                        ;
+; Top-level Entity Name              ; snooping                                        ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 25                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; snooping           ; pratica4           ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; memory.v                         ; yes             ; User Verilog HDL File  ; C:/ProgramasCEFET/quartus/AOCII/pratica4/memory.v   ;         ;
+; snooping.v                       ; yes             ; User Verilog HDL File  ; C:/ProgramasCEFET/quartus/AOCII/pratica4/snooping.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 25    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |snooping                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |snooping           ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |snooping|Tstep_Q                                           ;
++------------+------------+------------+------------+------------+------------+
+; Name       ; Tstep_Q.T3 ; Tstep_Q.T2 ; Tstep_Q.T1 ; Tstep_Q.T0 ; Tstep_Q.T4 ;
++------------+------------+------------+------------+------------+------------+
+; Tstep_Q.T0 ; 0          ; 0          ; 0          ; 0          ; 0          ;
+; Tstep_Q.T1 ; 0          ; 0          ; 1          ; 1          ; 0          ;
+; Tstep_Q.T2 ; 0          ; 1          ; 0          ; 1          ; 0          ;
+; Tstep_Q.T3 ; 1          ; 0          ; 0          ; 1          ; 0          ;
+; Tstep_Q.T4 ; 0          ; 0          ; 0          ; 1          ; 1          ;
++------------+------------+------------+------------+------------+------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; Tstep_Q~2                             ; Lost fanout        ;
+; Tstep_Q~3                             ; Lost fanout        ;
+; Tstep_Q.T4                            ; Lost fanout        ;
+; Tstep_Q.T0                            ; Lost fanout        ;
+; Tstep_Q.T1                            ; Lost fanout        ;
+; Tstep_Q.T2                            ; Lost fanout        ;
+; Tstep_Q.T3                            ; Lost fanout        ;
+; Total Number of Removed Registers = 7 ;                    ;
++---------------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                 ;
++---------------+--------------------+----------------------------------------+
+; Register name ; Reason for Removal ; Registers Removed due to This Register ;
++---------------+--------------------+----------------------------------------+
+; Tstep_Q~2     ; Lost Fanouts       ; Tstep_Q.T0, Tstep_Q.T2                 ;
+; Tstep_Q~3     ; Lost Fanouts       ; Tstep_Q.T1                             ;
++---------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |snooping ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; I              ; 00    ; Unsigned Binary                                 ;
+; S              ; 01    ; Unsigned Binary                                 ;
+; M              ; 10    ; Unsigned Binary                                 ;
+; write          ; 0     ; Unsigned Binary                                 ;
+; read           ; 1     ; Unsigned Binary                                 ;
+; write_hit      ; 00    ; Unsigned Binary                                 ;
+; write_miss     ; 01    ; Unsigned Binary                                 ;
+; read_hit       ; 10    ; Unsigned Binary                                 ;
+; read_miss      ; 11    ; Unsigned Binary                                 ;
+; bus_write_miss ; 00    ; Unsigned Binary                                 ;
+; bus_read_miss  ; 01    ; Unsigned Binary                                 ;
+; bus_ivalidate  ; 10    ; Unsigned Binary                                 ;
+; NA             ; 11    ; Unsigned Binary                                 ;
+; T0             ; 000   ; Unsigned Binary                                 ;
+; T1             ; 001   ; Unsigned Binary                                 ;
+; T2             ; 010   ; Unsigned Binary                                 ;
+; T3             ; 011   ; Unsigned Binary                                 ;
+; T4             ; 100   ; Unsigned Binary                                 ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Dec 02 19:31:54 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pratica4 -c pratica4
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: memory
+Info (12021): Found 1 design units, including 1 entities, in source file snooping.v
+    Info (12023): Found entity 1: snooping
+Info (12127): Elaborating entity "snooping" for the top level hierarchy
+Warning (10270): Verilog HDL Case Statement warning at snooping.v(163): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at snooping.v(229): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at snooping.v(229): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at snooping.v(104): inferring latch(es) for variable "write_read", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at snooping.v(104): inferring latch(es) for variable "data_in", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at snooping.v(104): inferring latch(es) for variable "flag", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at snooping.v(104): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at snooping.v(104): inferring latch(es) for variable "message", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "proc_status[0][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[0][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[1][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_status[2][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "message.NA" at snooping.v(104)
+Info (10041): Inferred latch for "message.bus_ivalidate" at snooping.v(104)
+Info (10041): Inferred latch for "message.bus_read_miss" at snooping.v(104)
+Info (10041): Inferred latch for "message.bus_write_miss" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][0][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][1][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][2][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[0][3][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][0][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][1][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][2][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[1][3][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][0][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][1][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][2][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][3]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][4]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][5]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][6]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][7]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][8]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][9]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][10]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][11]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][12]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][13]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][14]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_datas[2][3][15]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][0][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][1][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][2][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[0][3][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][0][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][1][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][2][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[1][3][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][0][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][0][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][0][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][1][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][1][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][1][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][2][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][2][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][2][2]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][3][0]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][3][1]" at snooping.v(104)
+Info (10041): Inferred latch for "proc_tags[2][3][2]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[0]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[1]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[2]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[3]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[4]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[5]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[6]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[7]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[8]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[9]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[10]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[11]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[12]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[13]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[14]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[15]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[16]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[17]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[18]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[19]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[20]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[21]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[22]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[23]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[24]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[25]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[26]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[27]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[28]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[29]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[30]" at snooping.v(104)
+Info (10041): Inferred latch for "flag[31]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[0]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[1]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[2]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[3]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[4]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[5]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[6]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[7]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[8]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[9]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[10]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[11]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[12]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[13]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[14]" at snooping.v(104)
+Info (10041): Inferred latch for "data_in[15]" at snooping.v(104)
+Info (10041): Inferred latch for "write_read.read_miss" at snooping.v(104)
+Info (10041): Inferred latch for "write_read.read_hit" at snooping.v(104)
+Info (10041): Inferred latch for "write_read.write_miss" at snooping.v(104)
+Info (10041): Inferred latch for "write_read.write_hit" at snooping.v(104)
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "proc_tags" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "proc_status" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "proc_datas" into its bus
+Info (12128): Elaborating entity "memory" for hierarchy "memory:mem"
+Warning (10240): Verilog HDL Always Construct warning at memory.v(18): inferring latch(es) for variable "data_out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "data_out[0]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[1]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[2]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[3]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[4]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[5]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[6]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[7]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[8]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[9]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[10]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[11]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[12]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[13]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[14]" at memory.v(18)
+Info (10041): Inferred latch for "data_out[15]" at memory.v(18)
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/ProgramasCEFET/quartus/AOCII/pratica4/output_files/pratica4.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 25 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "proc_num[0]"
+    Warning (15610): No output dependent on input pin "proc_num[1]"
+    Warning (15610): No output dependent on input pin "m_tag[0]"
+    Warning (15610): No output dependent on input pin "m_tag[1]"
+    Warning (15610): No output dependent on input pin "m_tag[2]"
+    Warning (15610): No output dependent on input pin "tag_position[0]"
+    Warning (15610): No output dependent on input pin "tag_position[1]"
+    Warning (15610): No output dependent on input pin "op"
+    Warning (15610): No output dependent on input pin "data[0]"
+    Warning (15610): No output dependent on input pin "data[1]"
+    Warning (15610): No output dependent on input pin "data[2]"
+    Warning (15610): No output dependent on input pin "data[3]"
+    Warning (15610): No output dependent on input pin "data[4]"
+    Warning (15610): No output dependent on input pin "data[5]"
+    Warning (15610): No output dependent on input pin "data[6]"
+    Warning (15610): No output dependent on input pin "data[7]"
+    Warning (15610): No output dependent on input pin "data[8]"
+    Warning (15610): No output dependent on input pin "data[9]"
+    Warning (15610): No output dependent on input pin "data[10]"
+    Warning (15610): No output dependent on input pin "data[11]"
+    Warning (15610): No output dependent on input pin "data[12]"
+    Warning (15610): No output dependent on input pin "data[13]"
+    Warning (15610): No output dependent on input pin "data[14]"
+    Warning (15610): No output dependent on input pin "data[15]"
+    Warning (15610): No output dependent on input pin "clock"
+Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4594 megabytes
+    Info: Processing ended: Fri Dec 02 19:31:55 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/ProgramasCEFET/quartus/AOCII/pratica4/output_files/pratica4.map.smsg.
+
+

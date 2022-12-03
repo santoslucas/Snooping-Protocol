@@ -1,0 +1,27 @@
+-- begin_signature
+-- processors
+-- end_signature
+WIDTH=2;
+DEPTH=16;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	15 :	00;
+	14 :	00;
+	13 :	00;
+	12 :	00;
+	11 :	00;
+	10 :	00;
+	9 :	00;
+	8 :	00;
+	7 :	00;
+	6 :	00;
+	5 :	00;
+	4 :	00;
+	3 :	00;
+	2 :	00;
+	1 :	00;
+	0 :	00;
+END;
